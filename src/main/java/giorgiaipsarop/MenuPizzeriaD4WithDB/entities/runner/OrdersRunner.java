@@ -3,6 +3,7 @@ package giorgiaipsarop.MenuPizzeriaD4WithDB.entities.runner;
 
 import giorgiaipsarop.MenuPizzeriaD4WithDB.MenuPizzeriaD4WithDbApplication;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.classes.*;
+import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.DrinkService;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.PizzaService;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.ToppingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,34 +22,43 @@ public class OrdersRunner implements CommandLineRunner {
     @Autowired
     ToppingService toppingService;
 
+    @Autowired
+    DrinkService drinkService;
 
    @Override
   public void run(String... args) throws Exception {
 
        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(MenuPizzeriaD4WithDbApplication.class);
 
-       Topping t1 = (Topping) ctx.getBean("toppings_tomato");
-       Topping t2 = (Topping) ctx.getBean("toppings_cheese");
-       Topping t3 = (Topping) ctx.getBean("toppings_ham");
-       Topping t4 = (Topping) ctx.getBean("toppings_pineapple");
-       Topping t5 = (Topping) ctx.getBean("toppings_salami");
-       toppingService.saveTopping(t1);
-       toppingService.saveTopping(t2);
-       toppingService.saveTopping(t3);
-       toppingService.saveTopping(t4);
-       toppingService.saveTopping(t5);
+//       Topping t1 = (Topping) ctx.getBean("toppings_tomato");
+//       Topping t2 = (Topping) ctx.getBean("toppings_cheese");
+//       Topping t3 = (Topping) ctx.getBean("toppings_ham");
+//       Topping t4 = (Topping) ctx.getBean("toppings_pineapple");
+//       Topping t5 = (Topping) ctx.getBean("toppings_salami");
+//       toppingService.saveTopping(t1);
+//       toppingService.saveTopping(t2);
+//       toppingService.saveTopping(t3);
+//       toppingService.saveTopping(t4);
+//       toppingService.saveTopping(t5);
+//
+//
+//       Pizza p1 = (Pizza) ctx.getBean("pizza_margherita");
+//       Pizza p2 = (Pizza) ctx.getBean("hawaiian_pizza");
+//       Pizza p3 = (Pizza) ctx.getBean("salami_pizza");
+//       Pizza p4 = (Pizza) ctx.getBean("salami_pizza_xl");
+//       pizzaService.savePizza(p1);
+//       pizzaService.savePizza(p2);
+//       pizzaService.savePizza(p3);
+//       pizzaService.savePizza(p4);
+//
 
-
-       Pizza p1 = (Pizza) ctx.getBean("pizza_margherita");
-       Pizza p2 = (Pizza) ctx.getBean("hawaiian_pizza");
-       Pizza p3 = (Pizza) ctx.getBean("salami_pizza");
-       Pizza p4 = (Pizza) ctx.getBean("salami_pizza_xl");
-       pizzaService.savePizza(p1);
-       pizzaService.savePizza(p2);
-       pizzaService.savePizza(p3);
-       pizzaService.savePizza(p4);
-
-
+//       Drink d1 = (Drink) ctx.getBean("lemonade");
+//       Drink d2 = (Drink) ctx.getBean("water");
+//       Drink d3 = (Drink) ctx.getBean("wine");
+//
+//       drinkService.saveDrink(d1);
+//       drinkService.saveDrink(d2);
+//       drinkService.saveDrink(d3);
 
 
 
