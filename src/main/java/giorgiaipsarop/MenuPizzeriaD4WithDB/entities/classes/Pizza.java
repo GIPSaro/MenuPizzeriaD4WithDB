@@ -1,7 +1,6 @@
 package giorgiaipsarop.MenuPizzeriaD4WithDB.entities.classes;
 
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.misc.Item;
-
 import jakarta.persistence.*;
 import jakarta.persistence.Table;
 import lombok.Getter;

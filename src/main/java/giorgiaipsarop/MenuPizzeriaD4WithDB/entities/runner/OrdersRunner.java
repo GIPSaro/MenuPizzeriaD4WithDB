@@ -2,17 +2,15 @@ package giorgiaipsarop.MenuPizzeriaD4WithDB.entities.runner;
 
 
 import giorgiaipsarop.MenuPizzeriaD4WithDB.MenuPizzeriaD4WithDbApplication;
-import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.classes.*;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.DrinkService;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.PizzaService;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.services.ToppingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
-@Profile("!test")
+
 @Component
 public class OrdersRunner implements CommandLineRunner {
 
@@ -59,6 +57,15 @@ public class OrdersRunner implements CommandLineRunner {
 //       drinkService.saveDrink(d1);
 //       drinkService.saveDrink(d2);
 //       drinkService.saveDrink(d3);
+
+
+       System.out.println();
+       System.out.println("***********Test Custom Query*************");
+       System.out.println("Pizze che costano meno di x €");
+       pizzaService.filterByPriceLessThan(8).forEach(System.out::println);
+       System.out.println();
+       System.out.println("Topping che hanno meno di x calorie");
+       toppingService.filterByCaloriesLessThan(50).forEach(System.out::println);
 
 
 

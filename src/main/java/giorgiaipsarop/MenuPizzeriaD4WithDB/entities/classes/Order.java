@@ -1,10 +1,7 @@
 package giorgiaipsarop.MenuPizzeriaD4WithDB.entities.classes;
 
-
-
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.misc.Item;
 import giorgiaipsarop.MenuPizzeriaD4WithDB.entities.misc.State;
-
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
